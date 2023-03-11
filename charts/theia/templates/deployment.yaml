@@ -48,7 +48,7 @@ spec:
           {{- if .Values.configMap.create }}
           envFrom:
           - configMapRef:
-              name: {{ include "theia.fullname" . }}
+              name: {{ .Values.configMap.name }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

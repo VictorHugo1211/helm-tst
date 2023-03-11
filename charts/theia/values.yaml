@@ -93,7 +93,7 @@ readinessProbe:
     port: http
 
 configMap:
-  name: ""
+  name: grupo3
   create: true
   data:
     script01.sh: |

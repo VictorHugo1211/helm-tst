@@ -1,11 +1,11 @@
-{{- if .Values.configMap.enabled }}
+{{- if .Values.configMap.create }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
  name: {{ .Values.configMap.name }}
 {{- with .Values.configMap.data }}
 data:
- {{ toYaml . | nindent 2 }}
+ {{- toYaml . | nindent 2 }}
 {{- end -}}
 {{- end }}
 
